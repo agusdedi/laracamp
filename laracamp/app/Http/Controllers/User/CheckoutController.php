@@ -189,34 +189,34 @@ class CheckoutController extends Controller
                 // TODO Set payment status in merchant's database to 'challenge'
                 $checkout->payment_status = 'pending';
             }
-            else if ($fraud == 'accept') {
+            elseif ($fraud == 'accept') {
                 // TODO Set payment status in merchant's database to 'success'
                 $checkout->payment_status = 'paid';
             }
         }
-        else if ($transaction_status == 'cancel') {
+        elseif ($transaction_status == 'cancel') {
             if ($fraud == 'challenge') {
                 // TODO Set payment status in merchant's database to 'failure'
                 $checkout->payment_status = 'failed';
             }
-            else if ($fraud == 'accept') {
+            elseif ($fraud == 'accept') {
                 // TODO Set payment status in merchant's database to 'failure'
                 $checkout->payment_status = 'failed';
             }
         }
-        else if ($transaction_status == 'deny') {
+        elseif ($transaction_status == 'deny') {
             // TODO Set payment status in merchant's database to 'failure'
             $checkout->payment_status = 'failed';
         }
-        else if ($transaction_status == 'settlement') {
+        elseif ($transaction_status == 'settlement') {
             // TODO set payment status in merchant's database to 'Settlement'
             $checkout->payment_status = 'paid';
         }
-        else if ($transaction_status == 'pending') {
+        elseif ($transaction_status == 'pending') {
             // TODO set payment status in merchant's database to 'Pending'
             $checkout->payment_status = 'pending';
         }
-        else if ($transaction_status == 'expire') {
+        elseif ($transaction_status == 'expire') {
             // TODO set payment status in merchant's database to 'expire'
             $checkout->payment_status = 'failed';
         }

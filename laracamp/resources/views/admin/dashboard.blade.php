@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row">
             <div class="col-8 offset-2">
-                <div class="card">
+                <div class="mt-3 card">
                     <div class="card-header">
                         My Camps
                     </div>
